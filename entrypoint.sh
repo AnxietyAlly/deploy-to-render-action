@@ -4,7 +4,7 @@ echo "$1"
 echo "$2"
 
 echo "Deploying has begun"
-
+curl $1
 echo "Deploying has finished"
 
 

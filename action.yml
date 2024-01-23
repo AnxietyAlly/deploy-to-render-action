@@ -1,6 +1,6 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Deploy to render'
+description: 'Deploy the main branch to render if a push has been sent to main'
 inputs:
   deploy_url:  # id of input
     description: 'The render deploy hook to access'
