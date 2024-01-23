@@ -1,9 +1,11 @@
 #!/bin/sh -l
 
-echo "$1"
-echo "$2"
-
 echo "Deploying has begun"
+apk add --update curl
+
+if [ "$2" = refs/heads/develop ]; then
+  echo "True"
+fi
 curl $1
 echo "Deploying has finished"
 
