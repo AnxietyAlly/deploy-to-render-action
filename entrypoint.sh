@@ -3,7 +3,7 @@
 echo "Deploying has begun"
 apk add --update curl
 
-if [ "$2" = refs/heads/develop ]; then
+if [ "$2" = refs/heads/main ]; then
   curl $1
 fi
 echo "Deploying has finished"
