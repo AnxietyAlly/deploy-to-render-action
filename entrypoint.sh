@@ -1,21 +1,13 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
+echo "$1"
+echo "$2"
 
-echo "Building frontend has begun"
-ls
-apk add --update npm
-# npm ci
-npm install
-npm run build --if-present
-echo "Building frontend has finished"
+echo "Deploying has begun"
 
-echo "time=$time" >> $GITHUB_OUTPUT
+echo "Deploying has finished"
 
-#   steps:
-#     - run: echo "Building frontend has begun"
-#     - uses: actions/checkout@v4
-#     - run: npm ci
-#     - run: npm run build --if-present
-#     - run: echo "Building frontend has finished"
+
+# if: github.ref == 'refs/heads/main'
+#       run: |
+#         curl "$deploy_url"
